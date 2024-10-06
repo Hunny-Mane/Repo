@@ -10,9 +10,25 @@ root.config(bg="#060E08")
 
 
 pygame.mixer.init()
+
+global music_path
+global music_path_2
+global music_path_3
+global music_path_4
+global music_path_5
+
 music_path = "D:\Repo\Python\Song\song1.mp3"
 pygame.mixer.music.load(music_path)
+pygame.mixer.music.play()
+pygame.mixer.music.pause()
 
+music_path_2 = "D:\Repo\Python\Song\song2.mp3"
+
+music_path_3 = "D:\Repo\Python\Song\song3.mp3"
+
+music_path_4 = "D:\Repo\Python\Song\song4.mp3"
+
+music_path_5 = "D:\Repo\Python\Song\song5.mp3"
 
 
 
@@ -63,6 +79,9 @@ frame4 = tk.Frame(root, bg="#5D734D", width=1000, height=1)
 frame4.place(x=370,y=250)
 
 def music_clicked() :
+    
+    pygame.mixer.music.stop()
+    pygame.mixer.music.load(music_path)
     pygame.mixer.music.play()
     play_button.config(text="⏸")
     play_button_clicked = True
@@ -86,7 +105,12 @@ music_button.place(x=390, y=290)
 
 
 def music1_clicked() :
-    pass
+    
+    pygame.mixer.music.stop()
+    pygame.mixer.music.load(music_path_2)
+    pygame.mixer.music.play()
+    play_button.config(text="⏸")
+    play_button_clicked = True
 
 music1_button = tk.Button(
     root,
@@ -107,13 +131,18 @@ music1_button.place(x=390, y=350)
 
 
 def music2_clicked() :
-    pass
+    
+    pygame.mixer.music.stop()
+    pygame.mixer.music.load(music_path_3)
+    pygame.mixer.music.play()
+    play_button.config(text="⏸")
+    play_button_clicked = True
 
 music2_button = tk.Button(
     root,
     relief=tk.FLAT,
     borderwidth=0, 
-    text="|         GGWP",
+    text="|         Ticking Away",
     bg="#060E08",
     fg="#326935",
     activebackground="#19260F",
@@ -124,6 +153,58 @@ music2_button = tk.Button(
     command=music2_clicked
 )
 music2_button.place(x=390, y=410)
+
+
+
+def music3_clicked() :
+    
+    pygame.mixer.music.stop()
+    pygame.mixer.music.load(music_path_4)
+    pygame.mixer.music.play()
+    play_button.config(text="⏸")
+    play_button_clicked = True
+
+music3_button = tk.Button(
+    root,
+    relief=tk.FLAT,
+    borderwidth=0, 
+    text="|         Desi Kalakar",
+    bg="#060E08",
+    fg="#326935",
+    activebackground="#19260F",
+    activeforeground="#AAABAA",
+    width=40,
+    font=("Arial", 20, "bold"), 
+    anchor="w",
+    command=music3_clicked
+)
+music3_button.place(x=390, y=470)
+
+
+
+def music4_clicked() :
+    
+    pygame.mixer.music.stop()
+    pygame.mixer.music.load(music_path_5)
+    pygame.mixer.music.play()
+    play_button.config(text="⏸")
+    play_button_clicked = True
+
+music4_button = tk.Button(
+    root,
+    relief=tk.FLAT,
+    borderwidth=0, 
+    text="|         Level",
+    bg="#060E08",
+    fg="#326935",
+    activebackground="#19260F",
+    activeforeground="#AAABAA",
+    width=40,
+    font=("Arial", 20, "bold"), 
+    anchor="w",
+    command=music4_clicked
+)
+music4_button.place(x=390, y=530)
 
 
 
@@ -147,7 +228,98 @@ playlist_button.place(x=20, y=220)
 
 
 def playlist2_clicked() :
-    pass
+    
+    frame5 = tk.Frame(root, bg="#060E08", width=1550, height=500)
+    frame5.place(x=300,y=80)
+    
+    lab4 = Label(
+        root,
+        text="#English",
+        fg="#5D734D",
+        bg="#060E08",
+        width=10,
+        font=("Arial", 60),
+    )
+    lab4.place(x=350,y=120)
+
+    frame4 = tk.Frame(root, bg="#5D734D", width=1000, height=1)
+    frame4.place(x=370,y=250)
+
+    def music_clicked() :
+        
+        pygame.mixer.music.stop()
+        pygame.mixer.music.load(music_path)
+        pygame.mixer.music.play()
+        play_button.config(text="⏸")
+        play_button_clicked = True
+
+    music_button = tk.Button(
+        root,
+        relief=tk.FLAT,
+        borderwidth=0, 
+        text="|         Mary on a Cross",
+        bg="#060E08",
+        fg="#326935",
+        activebackground="#19260F",
+        activeforeground="#AAABAA",
+        width=40,
+        font=("Arial", 20, "bold"), 
+        anchor="w",
+        command=music_clicked
+    )
+    music_button.place(x=390, y=290)
+
+
+
+    def music1_clicked() :
+        
+        pygame.mixer.music.stop()
+        pygame.mixer.music.load(music_path_2)
+        pygame.mixer.music.play()
+        play_button.config(text="⏸")
+        play_button_clicked = True
+
+    music1_button = tk.Button(
+        root,
+        relief=tk.FLAT,
+        borderwidth=0, 
+        text="|         Sunflower",
+        bg="#060E08",
+        fg="#326935",
+        activebackground="#19260F",
+        activeforeground="#AAABAA",
+        width=40,
+        font=("Arial", 20, "bold"), 
+        anchor="w",
+        command=music1_clicked
+    )
+    music1_button.place(x=390, y=350)
+
+
+
+    def music2_clicked() :
+        
+        pygame.mixer.music.stop()
+        pygame.mixer.music.load(music_path_3)
+        pygame.mixer.music.play()
+        play_button.config(text="⏸")
+        play_button_clicked = True
+
+    music2_button = tk.Button(
+        root,
+        relief=tk.FLAT,
+        borderwidth=0, 
+        text="|         Ticking Away",
+        bg="#060E08",
+        fg="#326935",
+        activebackground="#19260F",
+        activeforeground="#AAABAA",
+        width=40,
+        font=("Arial", 20, "bold"), 
+        anchor="w",
+        command=music2_clicked
+    )
+    music2_button.place(x=390, y=410)
 
 playlist2_button = tk.Button(
     root,
@@ -167,7 +339,47 @@ playlist2_button.place(x=20, y=300)
 
 
 def playlist3_clicked() :
-    pass
+    
+    frame5 = tk.Frame(root, bg="#060E08", width=1550, height=500)
+    frame5.place(x=300,y=80)
+    
+    lab4 = Label(
+        root,
+        text="#Hindi",
+        fg="#5D734D",
+        bg="#060E08",
+        width=10,
+        font=("Arial", 60),
+    )
+    lab4.place(x=350,y=120)
+
+    frame4 = tk.Frame(root, bg="#5D734D", width=1000, height=1)
+    frame4.place(x=370,y=250)
+    
+    def music3_clicked() :
+        
+        pygame.mixer.music.stop()
+        pygame.mixer.music.load(music_path_4)
+        pygame.mixer.music.play()
+        play_button.config(text="⏸")
+        play_button_clicked = True
+
+    music3_button = tk.Button(
+        root,
+        relief=tk.FLAT,
+        borderwidth=0, 
+        text="|         Desi Kalakar",
+        bg="#060E08",
+        fg="#326935",
+        activebackground="#19260F",
+        activeforeground="#AAABAA",
+        width=40,
+        font=("Arial", 20, "bold"), 
+        anchor="w",
+        command=music3_clicked
+    )
+    music3_button.place(x=390, y=290)
+    
 
 playlist3_button = tk.Button(
     root,
@@ -187,7 +399,100 @@ playlist3_button.place(x=20, y=380)
 
 
 def playlist4_clicked() :
-    pass
+    
+    frame5 = tk.Frame(root, bg="#060E08", width=1550, height=500)
+    frame5.place(x=300,y=80)
+    
+    lab4 = Label(
+        root,
+        text="#Pop",
+        fg="#5D734D",
+        bg="#060E08",
+        width=10,
+        font=("Arial", 60),
+    )
+    lab4.place(x=350,y=120)
+
+    frame4 = tk.Frame(root, bg="#5D734D", width=1000, height=1)
+    frame4.place(x=370,y=250)
+    
+    def music_clicked() :
+        
+        pygame.mixer.music.stop()
+        pygame.mixer.music.load(music_path)
+        pygame.mixer.music.play()
+        play_button.config(text="⏸")
+        play_button_clicked = True
+
+    music_button = tk.Button(
+        root,
+        relief=tk.FLAT,
+        borderwidth=0, 
+        text="|         Mary on a Cross",
+        bg="#060E08",
+        fg="#326935",
+        activebackground="#19260F",
+        activeforeground="#AAABAA",
+        width=40,
+        font=("Arial", 20, "bold"), 
+        anchor="w",
+        command=music_clicked
+    )
+    music_button.place(x=390, y=290)
+
+
+
+    def music2_clicked() :
+        
+        pygame.mixer.music.stop()
+        pygame.mixer.music.load(music_path_3)
+        pygame.mixer.music.play()
+        play_button.config(text="⏸")
+        play_button_clicked = True
+
+    music2_button = tk.Button(
+        root,
+        relief=tk.FLAT,
+        borderwidth=0, 
+        text="|         Ticking Away",
+        bg="#060E08",
+        fg="#326935",
+        activebackground="#19260F",
+        activeforeground="#AAABAA",
+        width=40,
+        font=("Arial", 20, "bold"), 
+        anchor="w",
+        command=music2_clicked
+    )
+    music2_button.place(x=390, y=350)
+
+
+
+
+    def music4_clicked() :
+        
+        pygame.mixer.music.stop()
+        pygame.mixer.music.load(music_path_5)
+        pygame.mixer.music.play()
+        play_button.config(text="⏸")
+        play_button_clicked = True
+
+    music4_button = tk.Button(
+        root,
+        relief=tk.FLAT,
+        borderwidth=0, 
+        text="|         Level",
+        bg="#060E08",
+        fg="#326935",
+        activebackground="#19260F",
+        activeforeground="#AAABAA",
+        width=40,
+        font=("Arial", 20, "bold"), 
+        anchor="w",
+        command=music4_clicked
+    )
+    music4_button.place(x=390, y=410)
+    
 
 playlist4_button = tk.Button(
     root,
@@ -207,7 +512,46 @@ playlist4_button.place(x=20, y=460)
 
 
 def playlist5_clicked() :
-    pass
+    
+    frame5 = tk.Frame(root, bg="#060E08", width=1550, height=500)
+    frame5.place(x=300,y=80)
+    
+    lab4 = Label(
+        root,
+        text="#Anime",
+        fg="#5D734D",
+        bg="#060E08",
+        width=10,
+        font=("Arial", 60),
+    )
+    lab4.place(x=350,y=120)
+
+    frame4 = tk.Frame(root, bg="#5D734D", width=1000, height=1)
+    frame4.place(x=370,y=250)
+    
+    def music4_clicked() :
+        
+        pygame.mixer.music.stop()
+        pygame.mixer.music.load(music_path_5)
+        pygame.mixer.music.play()
+        play_button.config(text="⏸")
+        play_button_clicked = True
+
+    music4_button = tk.Button(
+        root,
+        relief=tk.FLAT,
+        borderwidth=0, 
+        text="|         Level",
+        bg="#060E08",
+        fg="#326935",
+        activebackground="#19260F",
+        activeforeground="#AAABAA",
+        width=40,
+        font=("Arial", 20, "bold"), 
+        anchor="w",
+        command=music4_clicked
+    )
+    music4_button.place(x=390, y=290)
 
 playlist5_button = tk.Button(
     root,
@@ -386,6 +730,7 @@ play_button = tk.Button(
     command=play_clicked
 )
 play_button.place(x=750, y=725)
+
 
 
 def next_clicked() :
