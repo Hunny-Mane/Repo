@@ -128,12 +128,6 @@ lab5.place(x=350,y=320)
 frame4 = tk.Frame(root, bg="#5D734D", width=1000, height=1)
 frame4.place(x=370,y=250)
 
-def update() :
-    pygame.mixer.music.play(start=float(track_length))
-    position = pygame.mixer.music.get_pos()
-    current_pos = position / 1000                     
-    root.after(1000, current_pos)
-
 
 def playlist_clicked() :
     
@@ -198,7 +192,6 @@ def playlist_clicked() :
                     pygame.mixer.music.stop()
                     pygame.mixer.music.load(music_path)
                     pygame.mixer.music.play(start=selected_time)
-                    update()
                     play_button.config(text="⏸")
                     like_button.config(text="♡")
                     if like_button1_clicked == False :
@@ -444,7 +437,6 @@ def playlist2_clicked() :
         pygame.mixer.music.stop()
         pygame.mixer.music.load(music_path)
         pygame.mixer.music.play(start=selected_time)
-        update()
         play_button.config(text="⏸")
         like_button.config(text="♡")
         if like_button1_clicked == False :
@@ -1020,8 +1012,14 @@ sound_button.place(x=200, y=717)
 global volume_is 
 def volume_setter(var) :
     
+    global sound_button_clicked
+    
     volume_is = int(var) / 100
     pygame.mixer.music.set_volume(volume_is)
+    
+    if int(var) > 0 :
+        sound_button.config(text="🔊")
+        sound_button_clicked = False
 
 volume = tk.Scale(
     root,
