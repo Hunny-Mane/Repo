@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+
+    <div id="cartcontainer">
+        <h2>Your Cart</h2>
+
+        <div id="cl1" style="display: none;">
+            <div class="cart-item">
+                <img src="homepage-photo/food1.avif" alt="Tomato Pizza" class="cart-item-image">
+                <div class="cart-item-details">
+                    <p class="cart-item-name">Tomato Pizza</p>
+                    <p class="cart-item-price">Price: ₹150</p>
+                    <div class="quantity-controls">
+                        <button class="btn btn-secondary decrease-btn">-</button>
+                        <span class="item-quantity">1</span>
+                        <button class="btn btn-secondary increase-btn">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cl2" style="display: none;">
+            <div class="cart-item">
+                <img src="homepage-photo/food1.avif" alt="Pepperoni Pizza" class="cart-item-image">
+                <div class="cart-item-details">
+                    <p class="cart-item-name">Pepperoni Pizza</p>
+                    <p class="cart-item-price">Price: ₹180</p>
+                    <div class="quantity-controls">
+                        <button class="btn btn-secondary decrease-btn">-</button>
+                        <span class="item-quantity">1</span>
+                        <button class="btn btn-secondary increase-btn">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cl3" style="display: none;">
+            <div class="cart-item">
+                <img src="homepage-photo/food1.avif" alt="Pepperoni Pizza" class="cart-item-image">
+                <div class="cart-item-details">
+                    <p class="cart-item-name">Pepperoni Pizza</p>
+                    <p class="cart-item-price">Price: ₹100</p>
+                    <div class="quantity-controls">
+                        <button class="btn btn-secondary decrease-btn">-</button>
+                        <span class="item-quantity">1</span>
+                        <button class="btn btn-secondary increase-btn">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-total">
+            <p>Total: ₹<span id="total-price">0</span></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const c1 = document.getElementById('cl1');
+    const c2 = document.getElementById('cl2');
+    const c3 = document.getElementById('cl3');
+    const totalPriceElement = document.getElementById('total-price');
+    let totalPrice = 0;
+
+    // Check URL params to display the correct cart items
+    const urlParams = new URLSearchParams(window.location.search);
+    const showC1 = urlParams.get('showC1');
+    const showC2 = urlParams.get('showC2');
+    const showC3 = urlParams.get('showC3');
+
+    if (showC1 === 'true') {
+        c1.style.display = "block";
+    }
+    if (showC2 === 'true') {
+        c2.style.display = "block";
+    }
+    if (showC3 === 'true') {
+        c3.style.display = "block";
+    }
+
+    updateCart();
+
+    function updateCart() {
+        const cartItems = document.querySelectorAll('.cart-item');
+        
+        cartItems.forEach((item) => {
+            const decreaseBtn = item.querySelector('.decrease-btn');
+            const increaseBtn = item.querySelector('.increase-btn');
+            const quantityElement = item.querySelector('.item-quantity');
+            const priceElement = item.querySelector('.cart-item-price');
+
+            let itemPrice = 150;
+            let quantity = parseInt(quantityElement.textContent);
+
+            totalPrice = itemPrice * quantity;
+            updateTotalPrice(0); 
+
+            increaseBtn.addEventListener('click', () => {
+                quantity++;
+                quantityElement.textContent = quantity;
+                updateTotalPrice(itemPrice);
+            });
+
+            decreaseBtn.addEventListener('click', () => {
+                if (quantity > 1) {
+                    quantity--;
+                    quantityElement.textContent = quantity;
+                    updateTotalPrice(-itemPrice);
+                }
+            });
+        });
+    }
+
+    function updateTotalPrice(amount) {
+        totalPrice += amount;
+        totalPriceElement.textContent = totalPrice.toFixed(2); 
+    }
+});
+
+    </script>
+
+</body>
+</html>

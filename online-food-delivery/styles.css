@@ -1,0 +1,189 @@
+body{
+    margin: 0;
+}
+
+.header{
+    background-image: url("homepage-photo/header-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 55vh;
+    display: flex;
+    filter: brightness(0.8);
+}
+
+#contentofheader{
+    color: rgb(255, 255, 255);
+    font-size: 5em;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 7px 4px 4px rgba(0, 0, 0, 0.6);
+    height: max-content;
+    text-decoration: bold;
+    backdrop-filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    padding-top: 1.7em;
+    text-align: center;
+    position: absolute;
+}
+
+.topheader{
+    display: flex;
+    background-color: rgb(29, 29, 29);
+    padding: 20px;
+    font-size: x-large;
+    position: sticky;
+    top: 0px;
+    justify-content: space-evenly;
+}
+
+.heads{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: xx-large;
+    font-weight: 600;
+    background: none;
+    border: none;
+}
+
+
+.div1{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2.3em;
+    font-weight: 600;
+}
+
+#btn3{
+    font-size: x-large;
+}
+
+#btn1{
+    position: absolute;
+    z-index: 1;
+    margin-left: 80%;
+    margin-top: 3vh;
+    font-size: x-large;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+#btn1:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 20px;
+    opacity: 0.8;
+    transition: background-color 0.5s , color 0.5s;
+}
+
+
+#btn2{
+    position: absolute;
+    z-index: 1;
+    margin-left: 88%;
+    margin-top: 3vh;
+    font-size: x-large;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 500;
+}
+
+#btn2:hover{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    opacity: 0.8;
+    transition: background-color 0.5s , color 0.5s;
+}
+
+.div2{
+    display: flex;
+}
+
+.food1{
+    width: fit-content;
+    height: 200px;
+    background-color: rgb(214, 214, 214);
+    padding: 10px;
+    display: flex;
+}
+
+.aboutfood1{
+    width: fit-content;
+}
+
+.fooditem1{
+    margin-left: 5px;
+    margin-top: 10px;
+    padding-right: 7px;
+    padding-bottom: 7px;
+    background-color: rgb(172, 170, 170);
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1rem;
+    text-indent: 10px;
+    border-left: 5px rgb(190, 58, 58) solid;
+    border-radius: 0px 30px 30px 0px;
+}
+
+#foodimg1{
+    border-radius: 40% 0px 0px 40%;
+}
+
+#btn4{
+    width: auto;
+    margin-left: 23%;
+    font-size: x-large;
+    margin-top: 40px;
+}
+#btn5{
+    width: auto;
+    margin-left: 23%;
+    font-size: x-large;
+    margin-top: 40px;
+}
+#btn6{
+    width: auto;
+    margin-left: 23%;
+    font-size: x-large;
+    margin-top: 40px;
+}
+#btn7{
+    width: auto;
+    margin-left: 23%;
+    font-size: x-large;
+    margin-top: 40px;
+}
+#btn8{
+    width: auto;
+    margin-left: 23%;
+    font-size: x-large;
+    margin-top: 40px;
+}
+#btn9{
+    width: auto;
+    margin-left: 23%;
+    font-size: x-large;
+    margin-top: 40px;
+}
+
+.allitems{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contain{
+    padding: 30px;
+    background-color: rgb(186, 187, 187);
+    margin-left: 1em;
+    margin-right: 1em;
+}
